@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Curriculum Vitae</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_cv.css')}}" />
+    <script src="{{url_for('static', filename='curriculum.js')}}"></script>
+  </head>
+  
+  <body>
+    <div class="header">
+      <h1> {{ names }} </h1>
+      <h3> {{ ocupation }} </h3>
+    </div>
+    <div id="parent">
+      <div class="bar">
+      <h3> Contacto </h3>
+      <ul>
+        <li>{{ contact }}</li>
+      </ul>
+      <h3> Idiomas </h3>
+      <ul>
+        <li>Español: Nativo</li>
+        <li>Ingles: {{ ingles }} </li>
+      </ul>
+      <input type="text"><button onclick="añadir_1(this)">+</button>
+      <h3> Aptitudes </h3>
+      <ul>
+        <li> {{ aptitud }}</li>
+      </ul>
+      <input type="text"><button onclick="añadir_1(this)">+</button>
+      <h3> Habilidades </h3>
+      <ul>
+          <li> {{ habilidades }}</li>
+      </ul>
+      <input type="text"><button onclick="añadir_1(this)">+</button>
+    </div>
+    
+    <div class="content">
+      <div>
+        <h3> Perfil </h3>
+        <p> {{ perfil }} </p>
+      </div>
+      <h3> Lenguajes de programación </h3>
+        <p> {{ lenguajes }}</p>
+      <h3> Nacionalidad </h3>
+        <p> {{ nationality }} </p>
+      <h3> Fecha de nacimiento </h3>
+        <p> {{ birth_date }} </p>
+      <div>
+        <h3> Experiencia Laboral </h3>
+      </div>
+      <input type="text" placeholder="Titulo">
+      <button onclick="añadir_2(this)" class="text_btn">+</button>
+      <textarea placeholder="Descripcion" cols="50" rows="10" name="experiencia"></textarea>
+      <div>
+        <h3> Formación </h3>
+      </div>
+      <input type="text" placeholder="Titulo">
+      <button onclick="añadir_2(this)" class="text_btn" >+</button>
+      <textarea placeholder="Descripcion" cols="50" rows="2" name="formacion"></textarea>
+    </div>    
+  </body>
+</html>

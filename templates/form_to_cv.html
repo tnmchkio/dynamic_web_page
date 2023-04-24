@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO</title>
+    <link 
+        rel="stylesheet" 
+        href="{{ url_for('static', filenamr='style_form.css') }}"
+        />
+    <script src="{{url_for('static', filename='index.js')}}"></script>
+</head>
+<body>
+    <header>
+        <h1>Formulario a CV</h1>
+    </header>
+    <main>
+        <form action="{{ url_for('info') }}" method="post" >
+            <div id="container">
+                <div>
+                    <label for="nombre">
+                        <span>Nombre y Apellidos:</span>
+                        <input type="text" name="nombre" class="check_empty" onkeyup="validate()" id="nombre" placeholder="Ingresa tu nombre">
+                    </label>
+                </div>
+                <div>
+                    <label for="fecha">
+                        <span>Fecha de nacimiento:</span>
+                        <input type="date" onkeyup="validate()" class="check_empty" name="fecha" id="fecha">
+                    </label>
+                </div>
+                <div>
+                    <label for="ocupacion">
+                        <span>Ocupación:</span>
+                        <input type="text" onkeyup="validate()" class="check_empty" name="ocupacion" id="ocupacion">
+                    </label>   
+                </div>
+                <div>
+                    <label for="contacto">
+                        <span>Contacto (telefono, email):</span>
+                        <input onkeyup="validate()" class="check_empty" type="text" name="contacto" id="contacto">
+                    </label>
+                </div>
+                <div>
+                    <span><label for="nacionalidad">Nacionalidad:</label></span>
+                    <select onchange="validate()" class="check_empty" name="nacionalidad" id="nacionalidad">
+                        <option value="Perú">Perú</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Brasil">Brasil</option>
+                        <option value="Chile">Chile</option>
+                    </select>
+                </div>
+                <div>
+                    <span><label for="ingles">Nivel de ingles: </label><br></span>
+                    
+                    <input  type="radio" name="ingles" value="Basico"> Basico<br>
+                    <input  type="radio" name="ingles" value="Intermedio"> Intermedio<br>
+                    <input  type="radio" name="ingles" value="Avanzado"> Avanzado<br>
+                    <input  type="radio" name="ingles" value="Fluido"> Fluido
+                </div>
+                <div>
+                    <span><label for="lenguajes">Lenguajes de programación:</label></span>
+                    
+                    <select onchange="validate()" class="check_empty" name="lenguajes" multiple>
+                        <option value="C++">C++</option>
+                        <option value="Python">Python</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="PHP">PHP</option>
+                        <option value="Java">Java</option>
+                    </select>
+                </div>
+                <div>
+                    <span><label for="aptitud">Aptitudes:</label></span>
+                    
+                    <input onkeyup="validate()" class="check_empty" name="aptitud" list="aptitud">
+                    <datalist id="aptitud">
+                        <option value="Inteligencia emocional"></option> 
+                        <option value="Espiritu critico"></option> 
+                        <option value="Trabajo en equipo"></option> 
+                        <option value="Capacidad analitica"></option> 
+                        <option value="Habilidades Fisicas"></option>
+                    </datalist>
+                </div>
+                <div>
+                    <span><label for="habilidades">Habilidades:</label></span><br>
+                        <input   type="checkbox" value="Acondicionamiento fisico" name="habilidades" >
+                        <label for="Acondicionamiento fisico">Acondicionamiento fisico</label><br>
+                        <input  type="checkbox" value="Creacion videos deportivos" name="habilidades">
+                        <label for="Creacion videos deportivos">Creacion videos deportivos</label><br>
+                        <input   type="checkbox" value="Pack office" name="habilidades">
+                        <label for="Pack office">Pack office</label><br>
+                        <input   type="checkbox" value="Tenis" name="habilidades">
+                        <label for="Tenis">Tenis</label>
+                    </label>
+                </div>
+                <div>
+                    <label for="perfil">
+                        <span>Perfil:</span><br>
+                        <textarea class="check_empty" onkeyup="validate()"  name="perfil" cols="60" rows="6"  ></textarea>
+                    </label>
+                </div>
+            </div>
+            <input id="submit" type="submit">
+        </form>
+    </main>
+</body>
+</html>
