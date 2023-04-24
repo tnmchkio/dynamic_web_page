@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("form_to_cv.html")
+    return render_template('form_to_cv.html')
 
 @app.route("/curriculum",  methods=["POST"] )
 def info():

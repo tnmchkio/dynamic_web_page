@@ -1,4 +1,4 @@
-function añadir_1 (a) {
+function add_field_001(a) {
     const input = a.previousElementSibling;
     const lista = input.previousElementSibling;
     const li = document.createElement('li');
@@ -12,7 +12,7 @@ function remove(e) {
     e.parentNode.parentNode.removeChild(e.parentNode); 
 }
 
-function añadir_2 (a) {
+function add_field_002(a) {
     const input = a.previousElementSibling;
     const textArea = a.nextElementSibling;
     const container = input.previousElementSibling;
