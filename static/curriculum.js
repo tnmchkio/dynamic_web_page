@@ -1,4 +1,5 @@
-function add_field_001(a) {
+function add_field_001(a) 
+{
     const input = a.previousElementSibling;
     const lista = input.previousElementSibling;
     const li = document.createElement('li');
@@ -8,11 +9,13 @@ function add_field_001(a) {
     input.focus();
 }
 
-function remove(e) {
+function remove(e) 
+{
     e.parentNode.parentNode.removeChild(e.parentNode); 
 }
 
-function add_field_002(a) {
+function add_field_002(a) 
+{
     const input = a.previousElementSibling;
     const textArea = a.nextElementSibling;
     const container = input.previousElementSibling;
@@ -38,4 +41,5 @@ function add_field_002(a) {
     input.focus();
     textArea.value = '';
     textArea.focus();
+
 }
